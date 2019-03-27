@@ -11,6 +11,8 @@ Tested with the following domains (but should work with others):
 
 ### Setup
 
+Add [attribute-entity_row.js](https://raw.githubusercontent.com/benct/lovelace-attribute-entity-row/master/attribute-entity-row.js) to your `<config>/www/` folder.
+
 ```yaml
 resources:
   - url: /local/attribute-entity-row.js
