@@ -1,5 +1,5 @@
 # attribute-entity-row
-Show attribute(s) on entity rows in Home Assistant's Lovelace UI.
+Show entity attribute value(s) on entity rows in Home Assistant's Lovelace UI.
 
 Tested with the following domains (but should work with others):
 
