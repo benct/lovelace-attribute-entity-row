@@ -25,19 +25,21 @@ resources:
 | ---- | ---- | ------- | -----------
 | type | string | **Required** | `custom:attribute-entity-row`
 | entity | string | **Required** | `sensor.my_sensor`
-| name | string | optional | Override entity name / friendly_name
-| unit | string | optional | Override state unit_of_measurement
+| name | string | | Override entity name / friendly_name
+| unit | string | | Override state unit_of_measurement
 | toggle | bool | false | Display a toogle instead of state
 | hide_state | bool | false | Hide the entity state
+| primary | object | | Primary attribute object
+| secondary | object | | Secondary attribute object
 
 Primary/secondary object:
 
 | Name | Type | Default | Description
 | ---- | ---- | ------- | -----------
 | key  | string | **Required** | A valid attribute key within the entity
-| name | string | optional | Name / prefix for attribute
-| unit | string | optional | Unit / postfix for attribute
-| entity | string | optional | Use attribute from another entity
+| name | string | | Name / prefix for attribute
+| unit | string | | Unit / postfix for attribute
+| entity | string | | Use attribute from another entity
 
 ### Example
 
