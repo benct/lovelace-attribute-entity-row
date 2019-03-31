@@ -24,7 +24,7 @@ class AttributeEntityRow extends Polymer.Element {
             .info {
               flex: 1 0 60px;
             }
-            .secondary, ha-relative-time {
+            .secondary {
               display: block;
               color: var(--secondary-text-color);
             }
