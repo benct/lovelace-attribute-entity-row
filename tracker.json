@@ -1,0 +1,9 @@
+{
+  "attribute-entity-row": {
+    "updated_at": "2019-03-31",
+    "version": "1.0.0",
+    "remote_location": "https://raw.githubusercontent.com/benct/lovelace-attribute-entity-row/master/attribute-entity-row.js",
+    "visit_repo": "https://github.com/benct/lovelace-attribute-entity-row",
+    "changelog": "https://github.com/benct/lovelace-attribute-entity-row"
+  }
+}
