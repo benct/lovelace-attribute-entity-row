@@ -5,15 +5,7 @@ Show entity attribute value(s) on entity rows in Home Assistant's Lovelace UI.
 [![GH-last-commit](https://img.shields.io/github/last-commit/benct/lovelace-attribute-entity-row.svg?style=flat-square)](https://github.com/benct/lovelace-attribute-entity-row/commits/master)
 [![GH-code-size](https://img.shields.io/github/languages/code-size/benct/lovelace-attribute-entity-row.svg?style=flat-square)](https://github.com/benct/lovelace-attribute-entity-row)
 
-Tested with the following domains (but should work with others):
-
-- `sensor`
-- `switch`
-- `light`
-- `media_player`
-- `vacuum`
-
-### Setup
+## Setup
 
 Add [attribute-entity-row.js](https://raw.githubusercontent.com/benct/lovelace-attribute-entity-row/master/attribute-entity-row.js) to your `<config>/www/` folder. Add the following to your `ui-lovelace.yaml` file:
 
@@ -35,7 +27,7 @@ custom_updater:
     - https://raw.githubusercontent.com/benct/lovelace-attribute-entity-row/master/tracker.json
 ```
 
-### Options
+## Options
 
 | Name | Type | Default | Description
 | ---- | ---- | ------- | -----------
@@ -43,12 +35,12 @@ custom_updater:
 | entity | string | **Required** | `sensor.my_sensor`
 | name | string | | Override entity name / friendly_name
 | unit | string | | Override state unit_of_measurement
-| toggle | bool | false | Display a toogle instead of state
-| hide_state | bool | false | Hide the entity state
-| primary | object | | Primary attribute object
-| secondary | object | | Secondary attribute object
+| toggle | bool | `false` | Display a toogle instead of state
+| hide_state | bool | `false` | Hide the entity state
+| primary | object | *see below* | Primary attribute object
+| secondary | object | *see below* | Secondary attribute object
 
-Primary/secondary object:
+### Primary/secondary object
 
 | Name | Type | Default | Description
 | ---- | ---- | ------- | -----------
@@ -57,7 +49,7 @@ Primary/secondary object:
 | unit | string | | Unit / postfix for attribute
 | entity | string | | Use attribute from another entity
 
-### Example
+## Example
 
 ![attribute-entity-row](https://raw.githubusercontent.com/benct/lovelace-attribute-entity-row/master/example.png)
 
@@ -197,6 +189,13 @@ entities:
       entity: vacuum.xiaomi_vacuum_cleaner
 ```
 
----
+Partially based on @thomasloven's [slider-entity-row](https://github.com/thomasloven/lovelace-slider-entity-row) lovelace card.
 
-Partially based on @thomasloven's [slider-entity-row](https://github.com/thomasloven/lovelace-slider-entity-row) lovelace component.
+## My cards
+
+[xiaomi-vacuum-card](https://github.com/benct/lovelace-xiaomi-vacuum-card) | 
+[github-entity-row](https://github.com/benct/lovelace-github-entity-row) | 
+[multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row) | 
+[attribute-entity-row](https://github.com/benct/lovelace-attribute-entity-row)
+
+[![BMC](https://www.buymeacoffee.com/assets/img/custom_images/white_img.png)](https://www.buymeacoff.ee/benct)
