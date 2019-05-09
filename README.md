@@ -34,6 +34,7 @@ custom_updater:
 | type | string | **Required** | `custom:attribute-entity-row`
 | entity | string | **Required** | `sensor.my_sensor`
 | name | string | | Override entity name / friendly_name
+| name_attribute | string | | Use an attribute as the entity name
 | unit | string | | Override state unit_of_measurement
 | toggle | bool | `false` | Display a toogle instead of state
 | hide_state | bool | `false` | Hide the entity state

@@ -134,9 +134,12 @@ class AttributeEntityRow extends Polymer.Element {
         if (hass && this._config) {
             this.stateObj = this._config.entity in hass.states ? hass.states[this._config.entity] : null;
             if (this.stateObj) {
-                this.name = this._config.name || this.stateObj.attributes.friendly_name;
                 this.primary = this._config.primary;
                 this.secondary = this._config.secondary;
+                this.name = this._config.name || this.stateObj.attributes.friendly_name;
+                if (this._config.name_attribute && this._config.name_attribute in this.stateObj.attributes) {
+                    this.name = this.stateObj.attributes[this._config.name_attribute];
+                }
             }
         }
     }
