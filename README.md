@@ -5,6 +5,8 @@ Show entity attribute value(s) on entity rows in Home Assistant's Lovelace UI.
 [![GH-last-commit](https://img.shields.io/github/last-commit/benct/lovelace-attribute-entity-row.svg?style=flat-square)](https://github.com/benct/lovelace-attribute-entity-row/commits/master)
 [![GH-code-size](https://img.shields.io/github/languages/code-size/benct/lovelace-attribute-entity-row.svg?style=flat-square)](https://github.com/benct/lovelace-attribute-entity-row)
 
+**Note:** Semi-deprecated in favor of [multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row) card, so this card will most likely not be further worked upon.
+
 ## Setup
 
 Add [attribute-entity-row.js](https://raw.githubusercontent.com/benct/lovelace-attribute-entity-row/master/attribute-entity-row.js) to your `<config>/www/` folder. Add the following to your `ui-lovelace.yaml` file:
