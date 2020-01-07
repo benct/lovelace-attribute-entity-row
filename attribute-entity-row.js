@@ -124,7 +124,7 @@ class AttributeEntityRow extends Polymer.Element {
             if (!stateObj) return null;
         }
         let i18n = this._hass.resources[this._hass.language];
-        const value = stateObj.attributes[attribute.key] || i18n['state.default.unavailable'];
+        const value = (attribute.key in stateObj.attributes ? stateObj.attributes[attribute.key] : i18n['state.default.unavailable']);
         return (attribute.name ? `${attribute.name} ` : '') + value + (attribute.unit ? ` ${attribute.unit}` : '');
     }
 
