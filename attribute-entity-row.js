@@ -94,10 +94,7 @@ class AttributeEntityRow extends Polymer.Element {
                 toggle: true,
             },
             default: {
-                string: stateObj => {
-                    const unit = this._config.unit || stateObj.attributes.unit_of_measurement;
-                    return stateObj.state + (unit ? ` ${unit}` : '');
-                },
+                string: stateObj => this.stateValue(stateObj, this._config.unit),
                 toggle: false,
             }
         };
@@ -126,6 +123,33 @@ class AttributeEntityRow extends Polymer.Element {
         let i18n = this._hass.resources[this._hass.language];
         const value = (attribute.key in stateObj.attributes ? stateObj.attributes[attribute.key] : i18n['state.default.unavailable']);
         return (attribute.name ? `${attribute.name} ` : '') + value + (attribute.unit ? ` ${attribute.unit}` : '');
+    }
+
+    stateValue(stateObj, unit) {
+        let display;
+        const domain = stateObj.entity_id.substr(0, stateObj.entity_id.indexOf("."));
+
+        if (domain === "binary_sensor") {
+            if (stateObj.attributes.device_class) {
+                display = this._hass.localize(`state.${domain}.${stateObj.attributes.device_class}.${stateObj.state}`);
+            }
+            if (!display) {
+                display = this._hass.localize(`state.${domain}.default.${stateObj.state}`);
+            }
+        } else if (unit !== false && (unit || stateObj.attributes.unit_of_measurement) && !["unknown", "unavailable"].includes(stateObj.state)) {
+            display = `${stateObj.state} ${unit || stateObj.attributes.unit_of_measurement}`;
+        } else if (domain === "zwave") {
+            display = ["initializing", "dead"].includes(stateObj.state)
+                ? this._hass.localize(`state.zwave.query_stage.${stateObj.state}`, 'query_stage', stateObj.attributes.query_stage)
+                : this._hass.localize(`state.zwave.default.${stateObj.state}`);
+        } else {
+            display = this._hass.localize(`state.${domain}.${stateObj.state}`);
+        }
+
+        return display ||
+            this._hass.localize(`state.default.${stateObj.state}`) ||
+            this._hass.localize(`component.${domain}.state.${stateObj.state}`) ||
+            stateObj.state;
     }
 
     set hass(hass) {
