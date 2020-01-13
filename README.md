@@ -1,7 +1,7 @@
 # attribute-entity-row
 Show entity attribute value(s) on entity rows in Home Assistant's Lovelace UI.
 
-[![GH-release](https://img.shields.io/badge/version-1.1.1-red.svg?style=flat-square)](https://raw.githubusercontent.com/benct/lovelace-attribute-entity-row/master/attribute-entity-row.js)
+[![GH-release](https://img.shields.io/badge/version-1.1.2-red.svg?style=flat-square)](https://raw.githubusercontent.com/benct/lovelace-attribute-entity-row/master/attribute-entity-row.js)
 [![GH-last-commit](https://img.shields.io/github/last-commit/benct/lovelace-attribute-entity-row.svg?style=flat-square)](https://github.com/benct/lovelace-attribute-entity-row/commits/master)
 [![GH-code-size](https://img.shields.io/github/languages/code-size/benct/lovelace-attribute-entity-row.svg?style=flat-square)](https://github.com/benct/lovelace-attribute-entity-row)
 
@@ -13,7 +13,7 @@ Add [attribute-entity-row.js](https://raw.githubusercontent.com/benct/lovelace-a
 
 ```yaml
 resources:
-  - url: /local/attribute-entity-row.js?v=1.1.1
+  - url: /local/attribute-entity-row.js?v=1.1.2
     type: js
 ```
 
