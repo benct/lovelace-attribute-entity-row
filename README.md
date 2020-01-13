@@ -17,18 +17,6 @@ resources:
     type: js
 ```
 
-### *(Optional)* Add to custom updater
-
-1. Make sure you have the [custom_updater](https://github.com/custom-components/custom_updater) component installed and working.
-
-2. Add a new reference under `card_urls` in your `custom_updater` configuration in `configuration.yaml`.
-
-```yaml
-custom_updater:
-  card_urls:
-    - https://raw.githubusercontent.com/benct/lovelace-attribute-entity-row/master/tracker.json
-```
-
 ## Options
 
 | Name | Type | Default | Description
@@ -199,6 +187,6 @@ Partially based on @thomasloven's [slider-entity-row](https://github.com/thomasl
 [xiaomi-vacuum-card](https://github.com/benct/lovelace-xiaomi-vacuum-card) | 
 [github-entity-row](https://github.com/benct/lovelace-github-entity-row) | 
 [multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row) | 
-[attribute-entity-row](https://github.com/benct/lovelace-attribute-entity-row)
+[~~attribute-entity-row~~](https://github.com/benct/lovelace-attribute-entity-row)
 
 [![BMC](https://www.buymeacoffee.com/assets/img/custom_images/white_img.png)](https://www.buymeacoff.ee/benct)
